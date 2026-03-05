@@ -1,6 +1,5 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
-import MessageCards from "@/components/MessageCards";
 import { useMemo, useState } from "react";
 import ConfettiBurst from "@/components/ConfettiBurst";
 import CONFIG from "../Config";
@@ -75,7 +74,6 @@ export default function SecondPage(){
                     </div>
                 </footer>
               </div>
-              {/* Confetti overlay */}
               <ConfettiBurst/>
         </main>
         </>

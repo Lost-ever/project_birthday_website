@@ -104,7 +104,7 @@ export default function SecondPage(){
               </div>
         
               {/* Confetti overlay */}
-              <ConfettiBurst key={burstKey} active={opened || burstKey > 0} />
+              <ConfettiBurst/>
         </main>
         </>
     );
