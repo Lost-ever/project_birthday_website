@@ -19,7 +19,7 @@ export default function SecondPage(){
                   <div className="text-lg text-[#f3ddc2] font-cute">{CONFIG.birthdayDate}</div>
                   <div className="text-lg text-[#f3ddc2] font-cute">for <span className="text-white font-cute">{CONFIG.personName}</span></div>
                 </header>
-                <div className="fixed top-25 left-45 scale-90">
+                <div className="fixed md:top-25 md:left-45 md:scale-90 scale-30 top-10 left-15">
                         <img
                         src="/pookie.gif"
                         alt="cute gif"
@@ -34,7 +34,7 @@ export default function SecondPage(){
                         className="text-4xl font-semibold tracking-tight sm:text-6xl flex"
                     >
                         <span className="bg-linear-to-r text-[#f3ddc2] bg-clip-text flex">
-                        {CONFIG.titleLine}<p className="text-[#76393a] px-4">{"U"}</p>{CONFIG._titleLine}
+                        {CONFIG.titleLine}<p className="text-[#76393a] px-4 md:px-1">{"U"}</p>{CONFIG._titleLine}
                         </span>{"   "}
                         <span className="text-[#76393a] px-4">{CONFIG.personName}</span> 🎀
                     </motion.h1>
