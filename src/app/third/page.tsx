@@ -18,8 +18,8 @@ export default function ThirdPage(){
               {/* Content */}
               <div className="relative z-10 flex min-h-full max-w-full flex-col px-5 py-10 bg-[#f2cc8f] rounded-2xl">
                 <header className="flex items-center justify-between gap-4">
-                  <div className="text-lg text-[#2c2f44] font-cute">{CONFIG.birthdayDate}</div>
-                  <div className="text-lg text-[#2c2f44] font-cute">for {CONFIG.personName}</div>
+                  <div className="text-lg text-[#81b29a] font-cute">{CONFIG.birthdayDate}</div>
+                  <div className="text-lg text-[#81b29a] font-cute">for {CONFIG.personName}</div>
                 </header>
                 <div className="flex justify-between items-start-safe">
                     <div className="px-8 py-3 items-center justify-center flex">
@@ -148,24 +148,25 @@ export default function ThirdPage(){
                             </div>
                         </div>
                     </div>
-                    <div className="mt-8">
-                        <motion.button
-                            whileHover={{ scale: 1.03 }}
-                            whileTap={{ scale: 0.98 }}
-                            onClick={() => {
-                                router.push("/fourth");
-                            }}
-                            className="rounded-2xl bg-white/10 px-6 py-3 text-sm cursor-pointer font-medium text-white backdrop-blur ring-1 ring-white/20 hover:bg-white/15"
-                        >
-                            Final Reveal
-                        </motion.button>
-                    </div>
                     </div>
                     <div className="px-8 py-3 items-center justify-center flex">
                         <img
                         src={"/monster.gif"}
                         alt="cat img"
                         className="pointer-events-none scale-150"
+                        />
+                    </div>
+                </div>
+                <div className="flex justify-center items-center">
+                    <div className="mt-20 flex justify-center items-center flex-col cursor-pointer"
+                    onClick={() => {
+                        router.push("/fourth");
+                    }}>
+                        <p className="text-2xl text-[#81b29a]">Click here</p>
+                        <img
+                        src={"/flower.gif"}
+                        alt="click here"
+                        className="scale-40 -mt-35"
                         />
                     </div>
                 </div>

@@ -1,6 +1,7 @@
 "use client";
 import CONFIG from "./Config";
 import { useRouter } from "next/navigation";
+import ConfettiBurst from "@/components/ConfettiBurst";
 
 export default function FirstPage(){
     const router = useRouter();
@@ -34,7 +35,7 @@ export default function FirstPage(){
                       <p className="font-pop ">Its a Virtual Surprise For You</p>
                     </div>
                     <button onClick={changePage}
-                    className="mt-8 justify-center flex flex-col inset-0 overflow-hidden scale-50 ">
+                    className="mt-8 justify-center flex flex-col inset-0 overflow-hidden scale-50 cursor-pointer">
                       <p className="text-3xl text-[#e24f4f] font-bold">Click here</p>
                       <img
                         src="/button.gif"
@@ -57,6 +58,7 @@ export default function FirstPage(){
                     </div>
                 </footer>
               </div>
+              <ConfettiBurst/>
             </main>
         </>
     );

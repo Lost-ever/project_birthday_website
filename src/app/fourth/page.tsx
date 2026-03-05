@@ -47,7 +47,7 @@ export default function FourthPage(){
                 </div>
                 <footer className="mt-5 flex items-center justify-center text-lg text-[#f3ddc2]">
                     <div className="items-end justify-center flex">
-                           🙂‍↕️🙂‍↕️🙂‍↕️
+                           🫠🫠🫠
                     </div>
                 </footer>
               </div>
