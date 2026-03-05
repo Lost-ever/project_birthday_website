@@ -33,7 +33,8 @@ export default function MessageCards({
         ))}
       </div>
       <div className="mt-4">
-        <Button onClick={() => {}}>
+        <Button className="active:shadow-pink-400/40 transition-all duration-300 active:scale-110"
+        onClick={() => {}}>
             <p>Next Surprise</p>
         </Button>
       </div>

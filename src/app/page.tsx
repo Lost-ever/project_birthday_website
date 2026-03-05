@@ -64,7 +64,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 0.7 }}
-            className="mt-4 max-w-xl text-base text-white/80 sm:text-lg"
+            className="mt-4 max-w-xl text-base text-white/80 sm:text-xl"
           >
             {CONFIG.subtitleLine}
           </motion.p>

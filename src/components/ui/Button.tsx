@@ -23,7 +23,7 @@ export default function Button({
   >([]);
 
   const base =
-    "relative overflow-hidden px-6 py-3 rounded-2xl font-medium text-sm transition-all duration-300 backdrop-blur-md active:shadow-pink-400/40";
+    "relative overflow-hidden px-6 py-3 rounded-2xl font-medium text-sm transition-all duration-300 backdrop-blur-md";
 
   const variants = {
     primary:
@@ -66,8 +66,7 @@ export default function Button({
       {/* glow effect */}
       {variant === "primary" && (
         <span
-          className="absolute inset-0 rounded-2xl blur-xl opacity-40 
-          bg-linear-to-r from-pink-400 via-purple-400 to-indigo-400"
+          className="absolute inset-0 rounded-2xl blur-xl opacity-40 bg-linear-to-r from-pink-400 via-purple-400 to-indigo-400"
         />
       )}
 
