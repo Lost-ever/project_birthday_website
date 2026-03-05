@@ -13,6 +13,7 @@
   --font-mono: var(--font-geist-mono);
   --font-cute: var(--font-cute-font);
   --font-pop: var(--font-pop-font);
+  --font-cur: var(--font-cur-font);
 }
 
 @media (prefers-color-scheme: dark) {

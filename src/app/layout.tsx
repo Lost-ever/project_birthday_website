@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Pacifico, Poppins } from "next/font/google";
+import { Geist, Geist_Mono, Pacifico, Poppins, Courier_Prime } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -23,6 +23,13 @@ const popFont = Poppins({
   variable: "--font-pop-font",
   subsets: ["latin"],
 });
+
+const CouriorFont = Courier_Prime({
+  weight: "400",
+  variable: "--font-cur-font",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "Happy Birthday Dear",
   description: "Developed by God",
@@ -36,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${cuteFont.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${cuteFont.variable} ${popFont.variable} ${CouriorFont.variable} antialiased`}
       >
         {children}
       </body>

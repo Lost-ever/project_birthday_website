@@ -1,12 +1,14 @@
 "use client";
 import { motion } from "framer-motion";
-import { useState } from "react";
 import ConfettiBurst from "@/components/ConfettiBurst";
 import CONFIG from "../Config";
+import { useRouter } from "next/navigation";
 
 export default function SecondPage(){
-    const [opened, setOpened] = useState(false);
-    const [burstKey, setBurstKey] = useState(0);
+    const router = useRouter();
+    const changePage = () => {
+          router.push("/second");
+        };
     return(
         <>
         <main className="relative h-screen justify-center px-5 py-5">
@@ -17,7 +19,7 @@ export default function SecondPage(){
               <div className="relative z-10 flex h-full max-w-full flex-col px-5 py-10 bg-[#618a7f] rounded-2xl">
                 <header className="flex items-center justify-between gap-4">
                   <div className="text-lg text-[#f3ddc2] font-cute">{CONFIG.birthdayDate}</div>
-                  <div className="text-lg text-[#f3ddc2] font-cute">for <span className="text-white font-cute">{CONFIG.personName}</span></div>
+                  <div className="text-lg text-[#f3ddc2] font-cute">for {CONFIG.personName}</div>
                 </header>
                 <div className="fixed bottom-25 left-25 scale-90">
                         <img
@@ -34,7 +36,7 @@ export default function SecondPage(){
                         className="text-4xl font-semibold tracking-tight sm:text-6xl flex"
                     >
                         <span className="bg-linear-to-r text-[#f3ddc2] bg-clip-text flex">
-                        {CONFIG.titleLine}<p className="text-[#76393a] px-4 md:px-1">{"U"}</p>{CONFIG._titleLine}
+                        {CONFIG.titleLine}<p className="text-[#76393a] mx-4">{"U"}</p>{CONFIG._titleLine}
                         </span>{"   "}
                         <span className="text-[#76393a] px-4">{CONFIG.personName}</span> 🎀
                     </motion.h1>
@@ -52,8 +54,7 @@ export default function SecondPage(){
                             whileHover={{ scale: 1.03 }}
                             whileTap={{ scale: 0.98 }}
                             onClick={() => {
-                            setOpened(true);
-                            setBurstKey((k) => k + 1);
+                                router.push("/third");
                             }}
                             className="rounded-2xl bg-white/10 px-6 py-3 text-sm font-medium text-white backdrop-blur ring-1 ring-white/20 hover:bg-white/15"
                         >
