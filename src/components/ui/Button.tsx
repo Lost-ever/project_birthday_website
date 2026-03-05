@@ -23,7 +23,7 @@ export default function Button({
   >([]);
 
   const base =
-    "relative overflow-hidden px-6 py-3 rounded-2xl font-medium text-sm transition-all duration-300 backdrop-blur-md";
+    "relative overflow-hidden px-6 py-3 rounded-2xl font-medium text-sm transition-all duration-300 backdrop-blur-md active:shadow-pink-400/40";
 
   const variants = {
     primary:
