@@ -1,6 +1,6 @@
 "use client";
-import { motion, AnimatePresence } from "framer-motion";
-import { useMemo, useState } from "react";
+import { motion } from "framer-motion";
+import { useState } from "react";
 import ConfettiBurst from "@/components/ConfettiBurst";
 import CONFIG from "../Config";
 
@@ -19,7 +19,7 @@ export default function SecondPage(){
                   <div className="text-lg text-[#f3ddc2] font-cute">{CONFIG.birthdayDate}</div>
                   <div className="text-lg text-[#f3ddc2] font-cute">for <span className="text-white font-cute">{CONFIG.personName}</span></div>
                 </header>
-                <div className="fixed md:top-25 md:left-45 md:scale-90 sm:scale-30 sm:top-10 sm:left-15">
+                <div className="fixed bottom-25 left-25 scale-90">
                         <img
                         src="/pookie.gif"
                         alt="cute gif"
@@ -61,11 +61,11 @@ export default function SecondPage(){
                         </motion.button>
                     </div>
                     </div>
-                    <div className="fixed bottom-0 right-0 scale-90">
+                    <div className="fixed bottom-0 right-0 scale-70">
                         <img
                         src="/alien.gif"
                         alt="cute gif"
-                        className="w-full h-auto pointer-events-none"
+                        className="pointer-events-none"
                     />
                     </div>
                 <footer className="mt-10 flex items-center justify-center text-lg text-[#f3ddc2]">
