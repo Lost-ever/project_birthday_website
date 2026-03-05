@@ -12,7 +12,7 @@ type Piece = {
   drift: number;
 };
 
-export default function ConfettiBurst({ active }: { active: boolean }) {
+export default function ConfettiBurst() {
   const [mounted, setMounted] = useState(false);
 
   const pieces = useMemo<Piece[]>(() => {
@@ -36,7 +36,7 @@ export default function ConfettiBurst({ active }: { active: boolean }) {
 
   return (
     <div className="pointer-events-none absolute inset-0 z-20 overflow-hidden">
-      {active &&
+      {
         pieces.map((p) => (
           <span
             key={p.id}

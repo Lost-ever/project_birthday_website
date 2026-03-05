@@ -5,12 +5,14 @@
   --foreground: #171717;
 }
 
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-cute: var(--font-cute-font);
+  --font-pop: var(--font-pop-font);
 }
 
 @media (prefers-color-scheme: dark) {

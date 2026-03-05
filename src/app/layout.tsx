@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Pacifico } from "next/font/google";
+import { Geist, Geist_Mono, Pacifico, Poppins } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -18,6 +18,11 @@ const cuteFont = Pacifico({
   subsets: ["latin"],
 });
 
+const popFont = Poppins({
+  weight: "400",
+  variable: "--font-pop-font",
+  subsets: ["latin"],
+});
 export const metadata: Metadata = {
   title: "Happy Birthday Dear",
   description: "Developed by God",

@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import Button from "./ui/Button";
-import CardModal from "./ui/Card";
+import CardModal from "./Card";
 import { useState } from "react";
 
 export default function MessageCards({
@@ -35,10 +34,6 @@ export default function MessageCards({
         ))}
       </div>
       <div className="mt-4">
-        <Button className="active:shadow-pink-400/40 transition-all duration-300 active:scale-110"
-        onClick={() => {setOpen(true)}}>
-            <p>Next Surprise</p>
-        </Button>
       </div>
       <div>
         <CardModal
