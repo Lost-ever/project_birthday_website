@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useState } from "react";
 
 type ButtonProps = {
   children: React.ReactNode;
@@ -18,8 +18,12 @@ export default function Button({
   type = "button",
   disabled = false,
 }: ButtonProps) {
+  const [ripples, setRipples] = useState<
+    { x: number; y: number; id: number }[]
+  >([]);
+
   const base =
-    "relative px-6 py-3 rounded-2xl font-medium text-sm transition-all duration-300 backdrop-blur-md";
+    "relative overflow-hidden px-6 py-3 rounded-2xl font-medium text-sm transition-all duration-300 backdrop-blur-md";
 
   const variants = {
     primary:
@@ -32,13 +36,31 @@ export default function Button({
       "bg-transparent text-white hover:bg-white/10",
   };
 
+  const createRipple = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const id = Date.now();
+
+    setRipples((prev) => [...prev, { x, y, id }]);
+
+    setTimeout(() => {
+      setRipples((prev) => prev.filter((r) => r.id !== id));
+    }, 600);
+  };
+
   return (
     <motion.button
       type={type}
       disabled={disabled}
-      onClick={onClick}
+      onClick={(e) => {
+        createRipple(e);
+        onClick?.();
+      }}
       whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.96 }}
+      whileTap={{ scale: 0.93 }}
       className={`${base} ${variants[variant]} ${className}`}
     >
       {/* glow effect */}
@@ -48,6 +70,21 @@ export default function Button({
           bg-linear-to-r from-pink-400 via-purple-400 to-indigo-400"
         />
       )}
+
+      {/* ripple effects */}
+      {ripples.map((r) => (
+        <span
+          key={r.id}
+          className="absolute bg-white/40 rounded-full pointer-events-none animate-ripple"
+          style={{
+            left: r.x,
+            top: r.y,
+            width: 20,
+            height: 20,
+            transform: "translate(-50%, -50%)",
+          }}
+        />
+      ))}
 
       <span className="relative z-10 flex items-center gap-2 justify-center">
         {children}
