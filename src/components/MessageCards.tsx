@@ -1,7 +1,8 @@
 "use client";
-
 import { motion } from "framer-motion";
 import Button from "./ui/Button";
+import CardModal from "./ui/Card";
+import { useState } from "react";
 
 export default function MessageCards({
   title,
@@ -10,13 +11,14 @@ export default function MessageCards({
   title: string;
   notes: { title: string; text: string }[];
 }) {
+  const [open, setOpen] = useState(false);
   return (
     <section className="mx-auto w-full max-w-4xl">
-      <div className="mb-4 text-left text-sm font-medium text-white/80">
+      <div className="mb-4 text-left text-sm font-medium text-white/80 font-cute">
         {title}
       </div>
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 font-cute">
         {notes.map((n, idx) => (
           <motion.div
             key={n.title}
@@ -34,9 +36,18 @@ export default function MessageCards({
       </div>
       <div className="mt-4">
         <Button className="active:shadow-pink-400/40 transition-all duration-300 active:scale-110"
-        onClick={() => {}}>
+        onClick={() => {setOpen(true)}}>
             <p>Next Surprise</p>
         </Button>
+      </div>
+      <div>
+        <CardModal
+        open={open}
+        onClose={() => setOpen(false)}
+        toName="To you"
+        fromName="— Himanshu"
+        message="I hope your day is full of soft moments, big smiles, and all the love you deserve. 💗"
+      />
       </div>
     </section>
   );

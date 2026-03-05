@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <main className="relative min-h-dvh overflow-hidden bg-stars">
       {/* Soft gradient glow */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.35),transparent_55%),radial-gradient(circle_at_70%_60%,rgba(255,110,199,0.22),transparent_55%),radial-gradient(circle_at_40%_90%,rgba(80,200,255,0.18),transparent_60%)]" />
+      <div className="pointer-events-none font-cute absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(98,159,252,0.7),transparent_55%),radial-gradient(circle_at_90%_80%,rgba(249,148,252,0.7),transparent_55%),radial-gradient(circle_at_70%_90%,rgba(80,200,255,0.18),transparent_60%)]" />
 
       {/* 3D background */}
       <div className="absolute inset-0">
@@ -43,7 +43,7 @@ export default function Home() {
       {/* Content */}
       <div className="relative z-10 mx-auto flex min-h-dvh max-w-5xl flex-col px-5 py-10">
         <header className="flex items-center justify-between gap-4">
-          <div className="text-sm text-white/70">{CONFIG.birthdayDate}</div>
+          <div className="text-sm text-white/70 font-cute">{CONFIG.birthdayDate}</div>
           <div className="text-sm text-white/70">for <span className="text-white">{CONFIG.personName}</span></div>
         </header>
 
@@ -101,7 +101,7 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 14 }}
                 transition={{ duration: 0.6 }}
-                className="mt-10 w-full max-w-2xl rounded-3xl bg-white/6 p-6 backdrop-blur ring-1 ring-white/12"
+                className="mt-10 w-full max-w-2xl rounded-3xl bg-white/6 p-6 backdrop-blur ring-1 ring-white/12 font-cute"
               >
                 <div className="text-left">
                   <div className="text-xs uppercase tracking-widest text-white/60">

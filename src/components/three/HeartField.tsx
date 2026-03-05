@@ -39,10 +39,10 @@ export default function HeartField({ opened }: { opened: boolean }) {
     });
     geo.center();
 
-    const hearts: HeartDatum[] = Array.from({ length: 70 }).map(() => {
+    const hearts: HeartDatum[] = Array.from({ length: 200 }).map(() => {
       const r = (min: number, max: number) => min + Math.random() * (max - min);
       return {
-        pos: new THREE.Vector3(r(-4.6, 4.6), r(-1.6, 1.8), r(-8.5, -1.5)),
+        pos: new THREE.Vector3(r(-9.6, 9.6), r(-3.6, 4.8), r(-8.5, -0.5)),
         rot: new THREE.Euler(r(0, Math.PI), r(0, Math.PI), r(0, Math.PI)),
         scl: r(0.12, 0.42),
         speed: r(0.35, 0.9),
@@ -58,7 +58,7 @@ export default function HeartField({ opened }: { opened: boolean }) {
     const t = state.clock.getElapsedTime();
 
     if (group.current) {
-      group.current.rotation.y += dt * (opened ? 0.12 : 0.05);
+      group.current.rotation.y += 2*dt * (opened ? 0.12 : 0.05);
       group.current.rotation.x = Math.sin(t * 0.15) * (opened ? 0.06 : 0.03);
     }
   });
