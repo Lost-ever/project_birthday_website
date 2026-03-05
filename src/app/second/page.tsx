@@ -19,7 +19,7 @@ export default function SecondPage(){
                   <div className="text-lg text-[#f3ddc2] font-cute">{CONFIG.birthdayDate}</div>
                   <div className="text-lg text-[#f3ddc2] font-cute">for <span className="text-white font-cute">{CONFIG.personName}</span></div>
                 </header>
-                <div className="fixed md:top-25 md:left-45 md:scale-90 scale-30 top-10 left-15">
+                <div className="fixed md:top-25 md:left-45 md:scale-90 sm:scale-30 sm:top-10 sm:left-15">
                         <img
                         src="/pookie.gif"
                         alt="cute gif"
