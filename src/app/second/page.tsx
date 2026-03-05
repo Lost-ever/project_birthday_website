@@ -6,9 +6,6 @@ import { useRouter } from "next/navigation";
 
 export default function SecondPage(){
     const router = useRouter();
-    const changePage = () => {
-          router.push("/second");
-        };
     return(
         <>
         <main className="relative h-screen justify-center px-5 py-5">

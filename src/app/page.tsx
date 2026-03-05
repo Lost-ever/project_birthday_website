@@ -19,22 +19,36 @@ export default function FirstPage(){
                   <div className="text-lg text-white/70 font-cute">{CONFIG.birthdayDate}</div>
                   <div className="text-lg text-white/70 font-cute">for {CONFIG.personName}</div>
                 </header>
-                <div className="h-screen">
+                <div className="h-screen flex justify-between items-center">
+                  <div className="scale-170 mx-auto">
+                      <img
+                      src="/hand_shake.gif"
+                      alt="cute gif"
+                      className="pointer-events-none"
+                      />
+                  </div>
                   <div className="flex flex-col gap-10 justify-center items-center h-full">
-                    <p className="md:text-9xl font-cute text-6xl">Hey!</p>
+                    <p className="md:text-9xl font-cute text-6xl text-[#ceaa8e]">Hey!</p>
                     <div className="flex flex-col font-pop mt-5 justify-center items-center">
-                      <p className="font-pop">Have Something For You. </p>
-                      <p className="font-pop">Its a Virtual Surprise For You</p>
+                      <p className="font-pop ">Have Something For You. </p>
+                      <p className="font-pop ">Its a Virtual Surprise For You</p>
                     </div>
                     <button onClick={changePage}
                     className="mt-8 justify-center flex flex-col inset-0 overflow-hidden scale-50 ">
-                      <p className="text-3xl">Click here</p>
+                      <p className="text-3xl text-[#e24f4f] font-bold">Click here</p>
                       <img
                         src="/button.gif"
                         alt="cute gif"
                         className="focus:shadow-amber-300 cursor-pointer"
                       />
                     </button>
+                  </div>
+                  <div className="scale-170 mx-auto">
+                      <img
+                      src="/heads.gif"
+                      alt="cute gif"
+                      className="pointer-events-none"
+                      />
                   </div>
                 </div>
                 <footer className="mt-10 flex items-center justify-center text-lg text-[#f3ddc2]">

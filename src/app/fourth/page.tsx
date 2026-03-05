@@ -1,70 +1,51 @@
 "use client";
-import { motion, AnimatePresence } from "framer-motion";
 import ConfettiBurst from "@/components/ConfettiBurst";
 import CONFIG from "../Config";
 
-export default function SecondPage(){
+export default function FourthPage(){
     return(
         <>
-        <main className="relative h-screen justify-center px-5 py-5">
+        <main className="relative w-full min-h-screen justify-center px-5 py-5">
               {/* Soft gradient glow */}
-              <div className="pointer-events-none font-cute absolute inset-0 bg-[#f0f5df]"/>
+              <div className="pointer-events-none font-cute absolute inset-0 bg-[#ffead7]"/>
         
               {/* Content */}
-              <div className="relative z-10 flex h-full max-w-full flex-col px-5 py-10 bg-[#5e9ea0] rounded-2xl">
+              <div className="relative z-10 flex h-full max-w-full flex-col px-5 py-10 bg-[#3e4260] rounded-2xl">
                 <header className="flex items-center justify-between gap-4">
                   <div className="text-lg text-[#f3ddc2] font-cute">{CONFIG.birthdayDate}</div>
                   <div className="text-lg text-[#f3ddc2] font-cute">for {CONFIG.personName}</div>
                 </header>
-                <div className="fixed bottom-25 left-25 scale-90">
+                <div className="h-full flex justify-center items-center flex-col gap-5">
+                    <div className="flex h-full items-center justify-center">
                         <img
-                        src="/pookie.gif"
+                        src="/end.gif"
                         alt="cute gif"
                         className="pointer-events-none"
-                    />
+                        />
+                    </div>
+                    <div className="flex justify-center items-center flex-col mt-3">
+                        <p className="text-lg">Thanks for reaching till here. I know you don’t want to give false hopes & Blah Blah Blah… </p>
+                        <p className="text-lg">But please don’t try to recreate this.</p>
+                    </div> 
+                    <div className="flex justify-center items-center flex-col">
+                        <img
+                        src="/end2.gif"
+                        alt="cute gif"
+                        className="pointer-events-none scale-50"
+                        />
+                    </div>
+                    <div className="-mt-5 flex justify-center items-center">
+                        <p>And Once again Timilai Janma Din ko Dherai Badhai 🥳🎈...</p>
+                    </div>
+                    <div className="flex justify-center items-center flex-col">
+                        <img
+                        src="/huggy-wuggy.gif"
+                        alt="cute gif"
+                        className="pointer-events-none scale-50"
+                        />
+                    </div>
                 </div>
-                <div className="flex flex-1 flex-col items-center justify-center text-center">
-                    <motion.h1
-                        initial={{ opacity: 0, y: 12 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7 }}
-                        className="text-4xl font-semibold tracking-tight sm:text-6xl flex"
-                    >
-                        <span className="bg-linear-to-r text-[#f3ddc2] bg-clip-text flex">
-                        {CONFIG.titleLine}<p className="text-[#76393a] mx-4">{"U"}</p>{CONFIG._titleLine}
-                        </span>{"   "}
-                        <span className="text-[#76393a] px-4">{CONFIG.personName}</span> 🎀
-                    </motion.h1>
-                    <motion.div
-                        initial={{ opacity: 0, y: 12 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7 }}
-                        className="text-xl font-semibold tracking-tight mt-5">
-                        <p>Hope you have a great year ahead where everything goes as planned,</p>
-                        <p>with lots of success and a good placement coming your way.</p>
-                    </motion.div>
-
-                    {/* <div className="mt-8">
-                        <motion.button
-                            whileHover={{ scale: 1.03 }}
-                            whileTap={{ scale: 0.98 }}
-                            onClick={() => {
-                                router.push("/third");
-                            }}
-                            className="rounded-2xl bg-white/10 px-6 py-3 text-sm font-medium text-white backdrop-blur ring-1 ring-white/20 hover:bg-white/15"
-                        >
-                            {CONFIG.revealButton}
-                        </motion.button>
-                    </div> */}
-                    </div>
-                    <div className="fixed bottom-0 right-0 scale-70">
-                        <img
-                        src="/alien.gif"
-                        alt="cute gif"
-                        className="pointer-events-none"
-                    />
-                    </div>
-                <footer className="mt-10 flex items-center justify-center text-lg text-[#f3ddc2]">
+                <footer className="mt-5 flex items-center justify-center text-lg text-[#f3ddc2]">
                     <div className="items-end justify-center flex">
                            🙂‍↕️🙂‍↕️🙂‍↕️
                     </div>

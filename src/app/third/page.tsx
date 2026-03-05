@@ -4,7 +4,7 @@ import ConfettiBurst from "@/components/ConfettiBurst";
 import CONFIG from "../Config";
 import { useRouter } from "next/navigation";
 
-export default function SecondPage(){
+export default function ThirdPage(){
     const router = useRouter();
     const changePage = () => {
               router.push("/second");
@@ -21,12 +21,29 @@ export default function SecondPage(){
                   <div className="text-lg text-[#2c2f44] font-cute">{CONFIG.birthdayDate}</div>
                   <div className="text-lg text-[#2c2f44] font-cute">for {CONFIG.personName}</div>
                 </header>
-                <div className="flex flex-1 flex-col items-center justify-center text-center mt-10">
-                    <h1 className="font-cute text-5xl text-[#2c2f44]">Bouquet of Words 🌸</h1>
+                <div className="flex justify-between items-start-safe">
+                    <div className="px-8 py-3 items-center justify-center flex">
+                        <img
+                        src={"/cat.gif"}
+                        alt="cat img"
+                        className="pointer-events-none scale-150"
+                        />
+                    </div>
+                    <div className="flex flex-1 flex-col items-center justify-center text-center mt-10">
+                    <motion.div
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7 }}>
+                        <h1 className="font-cute text-5xl text-[#2c2f44]">Bouquet of Words 🌸</h1>
+                    </motion.div>
                     <div className="mt-4 animate-in fade-in-0 slide-in-from-bottom-4 duration-700 delay-150 [animation-fill-mode:both]">
                         <div className="text-center">
                             <div className="flex flex-col max-w-lg mx-auto bg-[#F5F5DC] rounded-full">
-                                <div className="flex relative justify-center items-center py-4 my-4">
+                                <motion.div 
+                                initial={{ opacity: 0, y: 12 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7 }}
+                                className="flex relative justify-center items-center py-4 my-4">
                                     <div className="relative w-125 min-h-102.5">
                                         <img src="https://pub-4ac1b7f0da8c43e8983d7821a18a8c0d.r2.dev/color/bush/bush-2.png" alt="bush background" width="600" height="500" className="absolute top-1/2 left-1/2 z-0 transform -translate-x-1/2 -translate-y-1/2" loading="eager"/>
                                         <div className="flex flex-wrap reverse w-75 justify-center items-center -space-x-4 -space-y-20 relative m-auto">
@@ -76,10 +93,13 @@ export default function SecondPage(){
                                             <img src="https://pub-4ac1b7f0da8c43e8983d7821a18a8c0d.r2.dev/color/bush/bush-2-top.png" alt="bush top" width="600" height="500" className="absolute top-1/2 left-1/2 z-10 transform -translate-x-1/2 -translate-y-1/2" loading="eager"/>
                                         </div>
                                     </div>
-                                </div>
+                                </motion.div>
                             </div>
                             <div className="mx-auto max-w-sm text-sm text-center">
-                                <div>
+                                <motion.div
+                                initial={{ opacity: 0, y: 12 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7 }}>
                                     <div className="bg-white border-[1.5px] border-black p-8 mx-auto -translate-y-12.5 -rotate-2 hover:-rotate-2 transition-all duration-300">
                                         <div className="space-y-4">
                                             <div className="flex flex-row gap-2 items-left justify-left">
@@ -124,7 +144,7 @@ export default function SecondPage(){
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </motion.div>
                             </div>
                         </div>
                     </div>
@@ -140,9 +160,17 @@ export default function SecondPage(){
                             Final Reveal
                         </motion.button>
                     </div>
+                    </div>
+                    <div className="px-8 py-3 items-center justify-center flex">
+                        <img
+                        src={"/monster.gif"}
+                        alt="cat img"
+                        className="pointer-events-none scale-150"
+                        />
+                    </div>
                 </div>
                 <footer className="mt-10 flex items-center justify-center text-lg text-[#2c2f44]">
-                  🥰🥰🥰
+                  🙂‍↔️🙂‍↔️🙂‍↔️
                 </footer>
               </div>
         
